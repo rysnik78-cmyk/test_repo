@@ -39,3 +39,67 @@ Najpierw zaplanuj funkcje – każda robi **jedną rzecz**:
 | `wydatki_wg_kategorii(transakcje)` | zwraca słownik kategoria → suma |
 | `usun_transakcje(transakcje)` | usuwa transakcję o podanym numerze |
 | `main()` | pętla główna programu |
+
+
+### 8.3. Szkielet do uzupełnienia przez studentów
+
+```python
+"""Menedżer budżetu domowego – projekt podsumowujący dzień 2."""
+
+
+def pokaz_menu() -> None:
+    print("\n=== MENEDŻER BUDŻETU ===")
+    print("1. Dodaj przychód")
+    print("2. Dodaj wydatek")
+    print("3. Pokaż wszystkie transakcje")
+    print("4. Pokaż saldo")
+    print("5. Wydatki według kategorii")
+    print("6. Usuń transakcję")
+    print("0. Wyjście")
+
+
+def wczytaj_kwote(komunikat: str) -> float:
+    """Wczytuje dodatnią kwotę; powtarza pytanie przy błędnych danych."""
+    # TODO: pętla while, sprawdzenie czy napis jest liczbą i czy > 0
+    pass
+
+
+def dodaj_transakcje(transakcje: list, typ: str) -> None:
+    # TODO: wczytaj kategorię, kwotę, opis i dodaj słownik do listy
+    pass
+
+
+def pokaz_transakcje(transakcje: list) -> None:
+    # TODO: tabela z numerami (enumerate) i f-stringami
+    pass
+
+
+def oblicz_saldo(transakcje: list) -> float:
+    # TODO
+    pass
+
+
+def wydatki_wg_kategorii(transakcje: list) -> dict:
+    # TODO
+    pass
+
+
+def usun_transakcje(transakcje: list) -> None:
+    # TODO
+    pass
+
+
+def main() -> None:
+    transakcje = []
+    while True:
+        pokaz_menu()
+        wybor = input("Wybierz opcję: ").strip()
+        # TODO: obsługa opcji (if/elif lub match)
+        if wybor == "0":
+            print("Do zobaczenia!")
+            break
+
+
+if __name__ == "__main__":
+    main()
+```
