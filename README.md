@@ -103,3 +103,11 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 ```
+
+### 8.5. Rozszerzenia dla chętnych
+
+1. Dodaj opcję „Największy wydatek”.
+2. Dodaj datę transakcji (`from datetime import date; date.today()`).
+3. Dodaj filtrowanie transakcji po kategorii.
+4. Ostrzegaj, gdy saldo spadnie poniżej zera.
+5. *(Zapowiedź kolejnych zajęć)* Zapisuj transakcje do pliku i wczytuj je przy starcie – poznamy to w temacie „Operacje wejścia/wyjścia”.
