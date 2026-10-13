@@ -14,7 +14,16 @@ def pokaz_menu() -> None:
 def wczytaj_kwote(komunikat: str) -> float:
     """Wczytuje dodatnią kwotę; powtarza pytanie przy błędnych danych."""
     # TODO: pętla while, sprawdzenie czy napis jest liczbą i czy > 0
-    return float(input(komunikat))
+    while True:
+        try:
+            kwota = float(input(komunikat))
+        except ValueError:
+            print("podaj poprawną liczbę")
+            continue
+        if kwota <= 0:
+            print("podaj dodatnią liczbę")
+            continue
+        return kwota
 
 def dodaj_transakcje(transakcje: list, typ: str) -> None:
     # TODO: wczytaj kategorię, kwotę, opis i dodaj słownik do listy
@@ -28,20 +37,37 @@ def dodaj_transakcje(transakcje: list, typ: str) -> None:
 
 def pokaz_transakcje(transakcje: list) -> None:
     # TODO: tabela z numerami (enumerate) i f-stringami
+    print('Transakcje w bazie:')
+    print('-' * 60)
+    nazwy_kolumn = ['l.p.', 'typ', 'kategoria', 'kwota', 'opis']
+    print(f'| {nazwy_kolumn[0] :4} | {nazwy_kolumn[1]:10} | {nazwy_kolumn[2]:10} | {nazwy_kolumn[3]:10} | {nazwy_kolumn[4]:10} |')
+    print('-' * 60)
     for n, transakcja in enumerate(transakcje):
-        print(f'{n + 1:4} {transakcja['typ']:10} {transakcja['kategoria']:10} {transakcja['kwota']:10} {transakcja['opis']:10}')
+        print(f'| {n+1 :4} | {transakcja['typ']:10} | {transakcja['kategoria']:10} | {transakcja['kwota']:10} | {transakcja['opis']:10} |')
+    print('-' * 60)
 
 def oblicz_saldo(transakcje: list) -> float:
-    # TODO
-    pass
+    saldo = 0
+    for transakcja in transakcje:
+        if transakcja['typ'] == 'przychód':
+            saldo += transakcja['kwota']
+        else:
+            saldo -= transakcja['kwota']
+    return saldo
 
 def wydatki_wg_kategorii(transakcje: list) -> dict:
     # TODO
-    pass
+    wydatki_kat_salda_dict = {}
+    for transakcja in transakcje:
+        if transakcja['kategoria'] not in wydatki_kat_salda_dict.keys():
+            wydatki_kat_salda_dict[transakcja['kategoria']] = 0
+        wydatki_kat_salda_dict[transakcja['kategoria']] += transakcja['kwota']
 
-def usun_transakcje(transakcje: list) -> None:
+    return wydatki_kat_salda_dict
+
+def usun_transakcje(transakcje: list, numer_transakcji) -> None:
     # TODO
-    pass
+    transakcje.pop(numer_transakcji - 1)
 
 def generuj(transakcje: list, trans_count) -> None:
     for _ in range(trans_count):
@@ -56,8 +82,7 @@ def generuj(transakcje: list, trans_count) -> None:
 
 def main() -> None:
     transakcje = []
-    generuj(transakcje, 10)
-    pokaz_transakcje(transakcje)
+
 
     while True:
         pokaz_menu()
@@ -69,22 +94,33 @@ def main() -> None:
                 break
             case "1":
                 dodaj_transakcje(transakcje, 'przychód')
+                print('Transakcja dodana do bazy')
                 continue
             case "2":
                 dodaj_transakcje(transakcje, 'wydatek')
+                print('Transakcja dodana do bazy')
                 continue
             case "3":
                 pokaz_transakcje(transakcje)
                 continue
             case "4":
-                oblicz_saldo(transakcje)
+                print(f'Saldo transakcji:{str(round(oblicz_saldo(transakcje), 2)):10}')
                 continue
             case "5":
-                wydatki_wg_kategorii(transakcje)
+                print('\nSalda w obrębie kategorii:\n')
+
+                for n, saldo in enumerate(wydatki_wg_kategorii(transakcje).items()):
+                    print(f'{n+1:3} | {saldo[0]:20} | {round(saldo[1],2):7}')
                 continue
             case "6":
-                usun_transakcje(transakcje)
+                pokaz_transakcje(transakcje)
+                no_trans_do_usun = int(input("Podaj numer transakcji do usunięcia: "))
+                usun_transakcje(transakcje, no_trans_do_usun)
+                print('Transakcje została usunięta z bazy')
                 continue
+            case "7":
+                generuj(transakcje, 10)
+                pokaz_transakcje(transakcje)
             case _:
                 print('Błędna komenda!\n')
 
