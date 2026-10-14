@@ -1,5 +1,7 @@
+import os
 import random
 from datetime import date, datetime
+import json
 
 def pokaz_menu() -> None:
     print("\n=== MENEDŻER BUDŻETU ===")
@@ -32,8 +34,8 @@ def dodaj_transakcje(transakcje: list, typ: str) -> None:
     kategoria = input("Podaj kategorię: ").strip()
     kwota = wczytaj_kwote('podaj kwotę, która stanowi ' + typ + ':')
     opis = input("Podaj opis: ").strip()
-    data_transakcje = date.today()
-    transakcja = {'typ':typ, "kategoria": kategoria, "kwota": kwota, "opis": opis, "data": data_transakcje}
+    data_transakcji = str(date.today())
+    transakcja = {'typ':typ, "kategoria": kategoria, "kwota": kwota, "opis": opis, "data": data_transakcji}
     transakcje.append(transakcja)
     print('Transakcja dodana do bazy')
     saldo = oblicz_saldo(transakcje)
@@ -88,7 +90,7 @@ def generuj(transakcje: list, trans_count) -> None:
         kategoria = random.choice(kategorie)
         kwota = round(random.random() * 100, 2)
         opis = 'losowanie'
-        data = datetime(random.randint(1900,2026), random.randint(1,12),random.randint(1,28)).date()
+        data = str(datetime(random.randint(1900,2026), random.randint(1,12),random.randint(1,28)).date())
         transakcja = {'typ': typ, "kategoria": kategoria, "kwota": kwota, "opis": opis, "data": data}
         transakcje.append(transakcja)
 
@@ -106,11 +108,19 @@ def najwiekszy_wydatek(transakcje: list) -> None:
 
 def load_transactions():
     # TODO: obsługa ładowania z pliku
-    return []
+    if os.path.isfile("save_file.json"):
+        save_file = open('save_file.json', 'r')
+        transactions = json.load(save_file)
+        save_file.close()
+        return transactions
+    else:
+        return []
 
 def save_transactions(transactions: list) -> None:
     # TODO: obsługa zapisu do pliku
-    pass
+        save_file = open('save_file.json', 'w')
+        json.dump(transactions, save_file)
+        save_file.close()
 
 def main() -> None:
     transakcje = load_transactions()
