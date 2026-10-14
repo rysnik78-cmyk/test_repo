@@ -109,18 +109,18 @@ def najwiekszy_wydatek(transakcje: list) -> None:
 def load_transactions():
     # TODO: obsługa ładowania z pliku
     if os.path.isfile("save_file.json"):
-        save_file = open('save_file.json', 'r')
-        transactions = json.load(save_file)
-        save_file.close()
+        with open('save_file.json', 'r') as save_file:
+            save_file = open('save_file.json', 'r')
+            transactions = json.load(save_file)
+
         return transactions
     else:
         return []
 
 def save_transactions(transactions: list) -> None:
     # TODO: obsługa zapisu do pliku
-        save_file = open('save_file.json', 'w')
-        json.dump(transactions, save_file)
-        save_file.close()
+    with open('save_file.json', 'w', encoding='utf-8') as save_file:
+        json.dump(transactions, save_file, indent=4, ensure_ascii=False)
 
 def main() -> None:
     transakcje = load_transactions()

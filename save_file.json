@@ -1,1 +1,219 @@
-[{"typ": "wydatek", "kategoria": "wegiel", "kwota": 11.69, "opis": "losowanie", "data": "1929-12-21"}, {"typ": "przych\u00f3d", "kategoria": "jedzenie", "kwota": 29.31, "opis": "losowanie", "data": "2007-04-09"}, {"typ": "przych\u00f3d", "kategoria": "telefon", "kwota": 36.69, "opis": "losowanie", "data": "1982-08-05"}, {"typ": "wydatek", "kategoria": "picie", "kwota": 16.89, "opis": "losowanie", "data": "2000-10-10"}, {"typ": "przych\u00f3d", "kategoria": "telefon", "kwota": 33.05, "opis": "losowanie", "data": "1992-02-18"}, {"typ": "przych\u00f3d", "kategoria": "picie", "kwota": 46.23, "opis": "losowanie", "data": "1936-09-13"}, {"typ": "przych\u00f3d", "kategoria": "wegiel", "kwota": 5.58, "opis": "losowanie", "data": "1989-09-18"}, {"typ": "wydatek", "kategoria": "jedzenie", "kwota": 44.62, "opis": "losowanie", "data": "1901-05-27"}, {"typ": "przych\u00f3d", "kategoria": "jedzenie", "kwota": 85.97, "opis": "losowanie", "data": "2006-01-11"}, {"typ": "wydatek", "kategoria": "picie", "kwota": 4.56, "opis": "losowanie", "data": "1993-11-03"}, {"typ": "wydatek", "kategoria": "paliwo", "kwota": 0.42, "opis": "losowanie", "data": "2018-12-02"}, {"typ": "wydatek", "kategoria": "telefon", "kwota": 33.38, "opis": "losowanie", "data": "1926-03-04"}, {"typ": "przych\u00f3d", "kategoria": "paliwo", "kwota": 77.91, "opis": "losowanie", "data": "1938-10-17"}, {"typ": "wydatek", "kategoria": "picie", "kwota": 82.06, "opis": "losowanie", "data": "2021-03-28"}, {"typ": "przych\u00f3d", "kategoria": "jedzenie", "kwota": 39.86, "opis": "losowanie", "data": "1997-01-25"}, {"typ": "przych\u00f3d", "kategoria": "picie", "kwota": 78.11, "opis": "losowanie", "data": "1934-05-10"}, {"typ": "wydatek", "kategoria": "wegiel", "kwota": 64.68, "opis": "losowanie", "data": "1927-01-10"}, {"typ": "przych\u00f3d", "kategoria": "paliwo", "kwota": 16.37, "opis": "losowanie", "data": "1931-07-02"}, {"typ": "wydatek", "kategoria": "jedzenie", "kwota": 0.55, "opis": "losowanie", "data": "1958-03-08"}, {"typ": "wydatek", "kategoria": "telefon", "kwota": 78.17, "opis": "losowanie", "data": "1903-01-25"}, {"typ": "wydatek", "kategoria": "jedzenie", "kwota": 1000.0, "opis": "sdfg", "data": "2026-10-14"}]
+[
+    {
+        "typ": "wydatek",
+        "kategoria": "wegiel",
+        "kwota": 11.69,
+        "opis": "losowanie",
+        "data": "1929-12-21"
+    },
+    {
+        "typ": "przychód",
+        "kategoria": "jedzenie",
+        "kwota": 29.31,
+        "opis": "losowanie",
+        "data": "2007-04-09"
+    },
+    {
+        "typ": "przychód",
+        "kategoria": "telefon",
+        "kwota": 36.69,
+        "opis": "losowanie",
+        "data": "1982-08-05"
+    },
+    {
+        "typ": "wydatek",
+        "kategoria": "picie",
+        "kwota": 16.89,
+        "opis": "losowanie",
+        "data": "2000-10-10"
+    },
+    {
+        "typ": "przychód",
+        "kategoria": "telefon",
+        "kwota": 33.05,
+        "opis": "losowanie",
+        "data": "1992-02-18"
+    },
+    {
+        "typ": "przychód",
+        "kategoria": "picie",
+        "kwota": 46.23,
+        "opis": "losowanie",
+        "data": "1936-09-13"
+    },
+    {
+        "typ": "przychód",
+        "kategoria": "wegiel",
+        "kwota": 5.58,
+        "opis": "losowanie",
+        "data": "1989-09-18"
+    },
+    {
+        "typ": "wydatek",
+        "kategoria": "jedzenie",
+        "kwota": 44.62,
+        "opis": "losowanie",
+        "data": "1901-05-27"
+    },
+    {
+        "typ": "przychód",
+        "kategoria": "jedzenie",
+        "kwota": 85.97,
+        "opis": "losowanie",
+        "data": "2006-01-11"
+    },
+    {
+        "typ": "wydatek",
+        "kategoria": "picie",
+        "kwota": 4.56,
+        "opis": "losowanie",
+        "data": "1993-11-03"
+    },
+    {
+        "typ": "wydatek",
+        "kategoria": "paliwo",
+        "kwota": 0.42,
+        "opis": "losowanie",
+        "data": "2018-12-02"
+    },
+    {
+        "typ": "wydatek",
+        "kategoria": "telefon",
+        "kwota": 33.38,
+        "opis": "losowanie",
+        "data": "1926-03-04"
+    },
+    {
+        "typ": "przychód",
+        "kategoria": "paliwo",
+        "kwota": 77.91,
+        "opis": "losowanie",
+        "data": "1938-10-17"
+    },
+    {
+        "typ": "wydatek",
+        "kategoria": "picie",
+        "kwota": 82.06,
+        "opis": "losowanie",
+        "data": "2021-03-28"
+    },
+    {
+        "typ": "przychód",
+        "kategoria": "jedzenie",
+        "kwota": 39.86,
+        "opis": "losowanie",
+        "data": "1997-01-25"
+    },
+    {
+        "typ": "przychód",
+        "kategoria": "picie",
+        "kwota": 78.11,
+        "opis": "losowanie",
+        "data": "1934-05-10"
+    },
+    {
+        "typ": "wydatek",
+        "kategoria": "wegiel",
+        "kwota": 64.68,
+        "opis": "losowanie",
+        "data": "1927-01-10"
+    },
+    {
+        "typ": "przychód",
+        "kategoria": "paliwo",
+        "kwota": 16.37,
+        "opis": "losowanie",
+        "data": "1931-07-02"
+    },
+    {
+        "typ": "wydatek",
+        "kategoria": "jedzenie",
+        "kwota": 0.55,
+        "opis": "losowanie",
+        "data": "1958-03-08"
+    },
+    {
+        "typ": "wydatek",
+        "kategoria": "telefon",
+        "kwota": 78.17,
+        "opis": "losowanie",
+        "data": "1903-01-25"
+    },
+    {
+        "typ": "wydatek",
+        "kategoria": "jedzenie",
+        "kwota": 1000.0,
+        "opis": "sdfg",
+        "data": "2026-10-14"
+    },
+    {
+        "typ": "przychód",
+        "kategoria": "jedzenie",
+        "kwota": 73.75,
+        "opis": "losowanie",
+        "data": "1961-02-10"
+    },
+    {
+        "typ": "wydatek",
+        "kategoria": "wegiel",
+        "kwota": 32.64,
+        "opis": "losowanie",
+        "data": "1981-04-19"
+    },
+    {
+        "typ": "wydatek",
+        "kategoria": "paliwo",
+        "kwota": 52.03,
+        "opis": "losowanie",
+        "data": "2008-12-23"
+    },
+    {
+        "typ": "wydatek",
+        "kategoria": "wegiel",
+        "kwota": 73.07,
+        "opis": "losowanie",
+        "data": "1969-02-06"
+    },
+    {
+        "typ": "przychód",
+        "kategoria": "picie",
+        "kwota": 86.34,
+        "opis": "losowanie",
+        "data": "1935-01-03"
+    },
+    {
+        "typ": "wydatek",
+        "kategoria": "wegiel",
+        "kwota": 66.87,
+        "opis": "losowanie",
+        "data": "1965-02-14"
+    },
+    {
+        "typ": "przychód",
+        "kategoria": "paliwo",
+        "kwota": 11.63,
+        "opis": "losowanie",
+        "data": "2011-05-06"
+    },
+    {
+        "typ": "wydatek",
+        "kategoria": "wegiel",
+        "kwota": 47.25,
+        "opis": "losowanie",
+        "data": "1950-09-06"
+    },
+    {
+        "typ": "przychód",
+        "kategoria": "jedzenie",
+        "kwota": 15.49,
+        "opis": "losowanie",
+        "data": "1902-12-25"
+    },
+    {
+        "typ": "wydatek",
+        "kategoria": "picie",
+        "kwota": 90.19,
+        "opis": "losowanie",
+        "data": "1967-06-26"
+    }
+]
